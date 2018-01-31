@@ -1,16 +1,8 @@
-const http = require('http');
+const  app=require('./app');
 
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    hostname = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hola Mundofahkjfhaskjfhakjfhasjhk\n');
-})
-;
 
-server.listen(port, hostname, () => {
-    console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
-})
-;
+app.listen(port,()=>{
+    console.log("servidoer creado");
+});
