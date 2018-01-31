@@ -18,7 +18,8 @@
     "npm": "*"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,5 @@
   "bugs": {
     "url": "http://github.com/openshift/nodejs-ex/issues"
   },
-  "homepage": "https://github.com/AlimProjectNode/bnjss"
+  "homepage": "http://github.com/openshift/nodejs-ex"
 }
