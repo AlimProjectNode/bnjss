@@ -74,7 +74,6 @@ app.get('/', function (req, res) {
         });
     } else {
         res.status(200).send({"ww":"dd"});
-        res.render('index.html', { pageCountMessage : null});
     }
 });
 
