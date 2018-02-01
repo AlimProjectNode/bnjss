@@ -1,8 +1,6 @@
 //  OpenShift sample Node application
 var express = require('express'),
-    app     = express(),
-    morgan  = require('morgan'),
-    route   = require('./app/routes/user');
+    app     = express();
 
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
@@ -52,7 +50,7 @@ var initDb = function(callback) {
         console.log('Connected to MongoDB at: %s', mongoURL);
     });
 };
-app.use('/api',route);
+//app.use('/api',route);
 app.get('/', function (req, res) {
     // try to initialize the db on every request if it's not already
     // initialized.
