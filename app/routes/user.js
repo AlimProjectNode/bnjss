@@ -6,4 +6,5 @@ var api=express.Router();
 
 
 api.get("/user",UserController.save);
+
 module.exports=api
