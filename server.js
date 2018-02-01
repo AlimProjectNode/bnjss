@@ -57,7 +57,6 @@ var initDb = function (callback) {
         console.log('Connected to MongoDB at: %s', mongoURL);
     });
 };
-+{´ñ}
 
 app.get('/', function (req, res) {
     if (!db) {
